@@ -1,78 +1,109 @@
-using ksTaskLog.Models;
-namespace ksTaskLog.Services;
+using MyTaskLog.Models;
+using myTaskLog.Interfaces;
+using System.Collections.Generic;
+using System.Linq;
+using System.IO;
+using System;
+using System.Text.Json;
+using Microsoft.AspNetCore.Hosting;
 
-public static class TaskLogcs
+namespace MyTaskLog.Services;
+
+
+public class TaskLogcs : ITaskLogService
 {
-    private static List<TaskLog> TaskLogs;
+    List<TaskLog> TaskLogs { get; }
+    private string fileName = "TaskList.json";
 
-    static TaskLogcs()
+    public TaskLogcs(IWebHostEnvironment webHost)
     {
-        TaskLogs = new List<TaskLog>
+        this.fileName = Path.Combine(webHost.ContentRootPath, "wwwroot/Data", "TaskList.json");
+
+        using (var jsonFile = File.OpenText(fileName))
         {
-            new TaskLog { Id = 1, Name = "Ayelet",DateToDo="25-12-23", IsDo = false},
-            new TaskLog { Id = 2, Name = "Rut", DateToDo="20-11-23", IsDo = false},
-            new TaskLog { Id = 3, Name = "Sara",DateToDo="07-11-23", IsDo = true}
-        };
+            TaskLogs = JsonSerializer.Deserialize<List<TaskLog>>(jsonFile.ReadToEnd(),
+            new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+        }
+
+    }
+    private void saveToFile()
+    {
+        File.WriteAllText(fileName, JsonSerializer.Serialize(TaskLogs));
     }
 
-    public static List<TaskLog> GetAll() => TaskLogs;
+    public List<TaskLog> GetAll() => TaskLogs;
 
-    public static TaskLog? GetById(int id) 
+    public TaskLog? GetById(int id)
     {
         return TaskLogs.FirstOrDefault(p => p.Id == id);
     }
 
-    public static int Add(TaskLog newTaskLog)
+
+    public int Add(TaskLog newTaskLog)
     {
         if (TaskLogs.Count == 0)
 
-            {
-                newTaskLog.Id = 1;
-            }
-            else
-            {
-        newTaskLog.Id =  TaskLogs.Max(p => p.Id) + 1;
+        {
+            newTaskLog.Id = 1;
+        }
+        else
+        {
+            newTaskLog.Id = TaskLogs.Max(p => p.Id) + 1;
 
-            }
+        }
 
         TaskLogs.Add(newTaskLog);
+        saveToFile();
 
         return newTaskLog.Id;
     }
-  
-    public static bool Update(int id, TaskLog newTaskLog)
+
+    public bool Update(int id, TaskLog newTaskLog)
     {
         if (id != newTaskLog.Id)
             return false;
 
         var existingTaskLog = GetById(id);
-        if (existingTaskLog == null )
+        if (existingTaskLog == null)
             return false;
 
         var index = TaskLogs.IndexOf(existingTaskLog);
-        if (index == -1 )
+        if (index == -1)
             return false;
 
         TaskLogs[index] = newTaskLog;
-
+        saveToFile();
         return true;
-    }  
+    }
 
-      
-    public static bool Delete(int id)
+
+    public bool Delete(int id)
     {
         var existingTaskLog = GetById(id);
-        if (existingTaskLog == null )
+        if (existingTaskLog == null)
             return false;
 
         var index = TaskLogs.IndexOf(existingTaskLog);
-        if (index == -1 )
+        if (index == -1)
             return false;
 
         TaskLogs.RemoveAt(index);
+         saveToFile();
         return true;
-    }  
+    }
 
 
 
+}
+//מחלקה extention
+//שתצור מופע יחיד של יומן משימות
+public static class TaskLogUtils
+{
+    public static void AddTaskLog(this IServiceCollection services)
+    {
+        services.AddSingleton<ITaskLogService, TaskLogcs>();
+    }
 }

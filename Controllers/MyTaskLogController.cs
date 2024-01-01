@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using ksTaskLog.Models;
-using ksTaskLog.Services;
+using myTaskLog.Interfaces;
+using MyTaskLog.Models;
+using MyTaskLog.Services;
 
 namespace ksTaskLog.Controllers;
 
@@ -8,16 +9,21 @@ namespace ksTaskLog.Controllers;
 [Route("todo")]
 public class TaskLogController : ControllerBase
 {
+    ITaskLogService TaskService;
+    public TaskLogController(ITaskLogService TaskService)
+    {
+        this.TaskService = TaskService;
+    }
     [HttpGet]
     public ActionResult<List<TaskLog>> Get()
     {
-        return TaskLogcs.GetAll();
+        return TaskService.GetAll();
     }
 
     [HttpGet("{id}")]
     public ActionResult<TaskLog> Get(int id)
     {
-        var TaskLog = TaskLogcs.GetById(id);
+        var TaskLog = TaskService.GetById(id);
         if (TaskLog == null)
             return NotFound();
         return TaskLog;
@@ -26,16 +32,16 @@ public class TaskLogController : ControllerBase
     [HttpPost]
     public ActionResult Post(TaskLog newTaskLog)
     {
-        var newId = TaskLogcs.Add(newTaskLog);
+        var newId = TaskService.Add(newTaskLog);
 
-        return CreatedAtAction("Post", 
-            new {id = newId}, TaskLogcs.GetById(newId));
+        return CreatedAtAction("Post",
+            new { id = newId }, TaskService.GetById(newId));
     }
 
     [HttpPut("{id}")]
-    public ActionResult Put(int id,TaskLog newTaskLog)
+    public ActionResult Put(int id, TaskLog newTaskLog)
     {
-        var result = TaskLogcs.Update(id, newTaskLog);
+        var result = TaskService.Update(id, newTaskLog);
         if (!result)
         {
             return BadRequest();
@@ -43,9 +49,10 @@ public class TaskLogController : ControllerBase
         return NoContent();
     }
     [HttpDelete("{id}")]
-    public ActionResult  Delete(int id ){
-        var IsDeleted=TaskLogcs.Delete(id);
-         if (!IsDeleted)
+    public ActionResult Delete(int id)
+    {
+        var IsDeleted = TaskService.Delete(id);
+        if (!IsDeleted)
         {
             return BadRequest();
         }

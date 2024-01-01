@@ -1,4 +1,4 @@
-namespace ksTaskLog.Models;
+namespace MyTaskLog.Models;
 
 public class TaskLog
 {

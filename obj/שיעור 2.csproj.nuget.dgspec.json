@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\The user\\Documents\\core_שב זילברברג\\שיעור 2\\שיעור 2.csproj": {}
+    "C:\\Users\\The user\\core_MyTaskLog\\שיעור 2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\The user\\Documents\\core_שב זילברברג\\שיעור 2\\שיעור 2.csproj": {
+    "C:\\Users\\The user\\core_MyTaskLog\\שיעור 2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\The user\\Documents\\core_שב זילברברג\\שיעור 2\\שיעור 2.csproj",
+        "projectUniqueName": "C:\\Users\\The user\\core_MyTaskLog\\שיעור 2.csproj",
         "projectName": "שיעור 2",
-        "projectPath": "C:\\Users\\The user\\Documents\\core_שב זילברברג\\שיעור 2\\שיעור 2.csproj",
+        "projectPath": "C:\\Users\\The user\\core_MyTaskLog\\שיעור 2.csproj",
         "packagesPath": "C:\\Users\\The user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\The user\\Documents\\core_שב זילברברג\\שיעור 2\\obj\\",
+        "outputPath": "C:\\Users\\The user\\core_MyTaskLog\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

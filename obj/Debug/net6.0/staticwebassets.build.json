@@ -1,11 +1,88 @@
 {
   "Version": 1,
-  "Hash": "bsD1Uci4u86kw5SxrQDItWMCx7UZtRxkAXUZAKqiAA0=",
+  "Hash": "EdOb+fordYZTWdfNSEIZz+S4jIQlKqgbP5CO0orhfYA=",
   "Source": "שיעור 2",
   "BasePath": "_content/שיעור 2",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "שיעור 2\\wwwroot",
+      "Source": "שיעור 2",
+      "ContentRoot": "C:\\Users\\The user\\core_MyTaskLog\\wwwroot\\",
+      "BasePath": "_content/שיעור 2",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\The user\\core_MyTaskLog\\wwwroot\\css\\site.css",
+      "SourceId": "שיעור 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\The user\\core_MyTaskLog\\wwwroot\\",
+      "BasePath": "_content/שיעור 2",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\The user\\core_MyTaskLog\\wwwroot\\data\\TaskList.json",
+      "SourceId": "שיעור 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\The user\\core_MyTaskLog\\wwwroot\\",
+      "BasePath": "_content/שיעור 2",
+      "RelativePath": "data/TaskList.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\TaskList.json"
+    },
+    {
+      "Identity": "C:\\Users\\The user\\core_MyTaskLog\\wwwroot\\index.html",
+      "SourceId": "שיעור 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\The user\\core_MyTaskLog\\wwwroot\\",
+      "BasePath": "_content/שיעור 2",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\The user\\core_MyTaskLog\\wwwroot\\js\\site.js",
+      "SourceId": "שיעור 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\The user\\core_MyTaskLog\\wwwroot\\",
+      "BasePath": "_content/שיעור 2",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ]
 }
