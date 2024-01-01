@@ -53,3 +53,31 @@ C:\Users\The user\core_MyTaskLog\obj\Debug\net6.0\שיעור 2.pdb
 C:\Users\The user\core_MyTaskLog\obj\Debug\net6.0\שיעור 2.genruntimeconfig.cache
 C:\Users\The user\core_MyTaskLog\obj\Debug\net6.0\ref\שיעור 2.dll
 C:\Users\The user\core_MyTaskLog\bin\Debug\net6.0\שיעור 2.staticwebassets.runtime.json
+D:\core\3\KsPizza\core_MyTaskLog\bin\Debug\net6.0\appsettings.Development.json
+D:\core\3\KsPizza\core_MyTaskLog\bin\Debug\net6.0\appsettings.json
+D:\core\3\KsPizza\core_MyTaskLog\bin\Debug\net6.0\שיעור 2.staticwebassets.runtime.json
+D:\core\3\KsPizza\core_MyTaskLog\bin\Debug\net6.0\שיעור 2.exe
+D:\core\3\KsPizza\core_MyTaskLog\bin\Debug\net6.0\שיעור 2.deps.json
+D:\core\3\KsPizza\core_MyTaskLog\bin\Debug\net6.0\שיעור 2.runtimeconfig.json
+D:\core\3\KsPizza\core_MyTaskLog\bin\Debug\net6.0\שיעור 2.dll
+D:\core\3\KsPizza\core_MyTaskLog\bin\Debug\net6.0\שיעור 2.pdb
+D:\core\3\KsPizza\core_MyTaskLog\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\core\3\KsPizza\core_MyTaskLog\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\core\3\KsPizza\core_MyTaskLog\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\core\3\KsPizza\core_MyTaskLog\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\core\3\KsPizza\core_MyTaskLog\obj\Debug\net6.0\שיעור 2.csproj.AssemblyReference.cache
+D:\core\3\KsPizza\core_MyTaskLog\obj\Debug\net6.0\שיעור 2.GeneratedMSBuildEditorConfig.editorconfig
+D:\core\3\KsPizza\core_MyTaskLog\obj\Debug\net6.0\שיעור 2.AssemblyInfoInputs.cache
+D:\core\3\KsPizza\core_MyTaskLog\obj\Debug\net6.0\שיעור 2.AssemblyInfo.cs
+D:\core\3\KsPizza\core_MyTaskLog\obj\Debug\net6.0\שיעור 2.csproj.CoreCompileInputs.cache
+D:\core\3\KsPizza\core_MyTaskLog\obj\Debug\net6.0\שיעור 2.MvcApplicationPartsAssemblyInfo.cs
+D:\core\3\KsPizza\core_MyTaskLog\obj\Debug\net6.0\שיעור 2.MvcApplicationPartsAssemblyInfo.cache
+D:\core\3\KsPizza\core_MyTaskLog\obj\Debug\net6.0\staticwebassets.build.json
+D:\core\3\KsPizza\core_MyTaskLog\obj\Debug\net6.0\staticwebassets.development.json
+D:\core\3\KsPizza\core_MyTaskLog\obj\Debug\net6.0\scopedcss\bundle\שיעור 2.styles.css
+D:\core\3\KsPizza\core_MyTaskLog\obj\Debug\net6.0\שיעור 2.csproj.CopyComplete
+D:\core\3\KsPizza\core_MyTaskLog\obj\Debug\net6.0\שיעור 2.dll
+D:\core\3\KsPizza\core_MyTaskLog\obj\Debug\net6.0\refint\שיעור 2.dll
+D:\core\3\KsPizza\core_MyTaskLog\obj\Debug\net6.0\שיעור 2.pdb
+D:\core\3\KsPizza\core_MyTaskLog\obj\Debug\net6.0\שיעור 2.genruntimeconfig.cache
+D:\core\3\KsPizza\core_MyTaskLog\obj\Debug\net6.0\ref\שיעור 2.dll

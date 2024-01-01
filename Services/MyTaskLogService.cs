@@ -12,12 +12,12 @@ namespace MyTaskLog.Services;
 
 public class TaskLogcs : ITaskLogService
 {
-    List<TaskLog> TaskLogs { get; }
+    List<TaskLog> TaskLogs ;
     private string fileName = "TaskList.json";
 
     public TaskLogcs(IWebHostEnvironment webHost)
     {
-        this.fileName = Path.Combine(webHost.ContentRootPath, "wwwroot/Data", "TaskList.json");
+        this.fileName = Path.Combine(webHost.ContentRootPath, "wwwroot","Data", "TaskList.json");
 
         using (var jsonFile = File.OpenText(fileName))
         {
@@ -94,6 +94,7 @@ public class TaskLogcs : ITaskLogService
          saveToFile();
         return true;
     }
+    public int Count=>TaskLogs.Count();
 
 
 
