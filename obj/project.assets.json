@@ -428,11 +428,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\core\\3\\KsPizza\\core_MyTaskLog\\שיעור 2.csproj",
+      "projectUniqueName": "C:\\Users\\The user\\Documents\\עבודה בGitHub\\core\\core_MyTaskLog\\שיעור 2.csproj",
       "projectName": "שיעור 2",
-      "projectPath": "D:\\core\\3\\KsPizza\\core_MyTaskLog\\שיעור 2.csproj",
+      "projectPath": "C:\\Users\\The user\\Documents\\עבודה בGitHub\\core\\core_MyTaskLog\\שיעור 2.csproj",
       "packagesPath": "C:\\Users\\The user\\.nuget\\packages\\",
-      "outputPath": "D:\\core\\3\\KsPizza\\core_MyTaskLog\\obj\\",
+      "outputPath": "C:\\Users\\The user\\Documents\\עבודה בGitHub\\core\\core_MyTaskLog\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

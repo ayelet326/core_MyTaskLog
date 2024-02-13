@@ -1,4 +1,7 @@
 using  MyTaskLog.Services;
+using LogMiddleware.Middlewares;
+using Microsoft.AspNetCore.Builder;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -17,7 +20,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+// logFile.log תיעוד הפעולות יכתב בקובץ  
+app.UseLogMiddleware("logFile.log");
 app.UseHttpsRedirection();
 app.UseDefaultFiles();
 app.UseStaticFiles();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kH12kUid5ZD3K79tqTGK3HN4aGjq+H7Xve1JTWHcPD6SydYq806g6yyFNny1GWWKNYenqQstXeEuMOCnj4mNKw==",
+  "dgSpecHash": "QjpXIOVDqDB3I0GmvMXISwB86fv/XNtMAeIkywllOMVStbPgpmZo1TqRwY7z6o/RCy/DCtJaBMcka+G1qQU4lg==",
   "success": true,
-  "projectFilePath": "D:\\core\\3\\KsPizza\\core_MyTaskLog\\שיעור 2.csproj",
+  "projectFilePath": "C:\\Users\\The user\\Documents\\עבודה בGitHub\\core\\core_MyTaskLog\\שיעור 2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\The user\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\The user\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

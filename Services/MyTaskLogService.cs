@@ -15,17 +15,21 @@ public class TaskLogcs : ITaskLogService
     List<TaskLog> TaskLogs ;
     private string fileName = "TaskList.json";
 
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     public TaskLogcs(IWebHostEnvironment webHost)
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     {
         this.fileName = Path.Combine(webHost.ContentRootPath, "wwwroot","Data", "TaskList.json");
 
         using (var jsonFile = File.OpenText(fileName))
         {
+#pragma warning disable CS8601 // Possible null reference assignment.
             TaskLogs = JsonSerializer.Deserialize<List<TaskLog>>(jsonFile.ReadToEnd(),
             new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
             });
+#pragma warning restore CS8601 // Possible null reference assignment.
         }
 
     }
