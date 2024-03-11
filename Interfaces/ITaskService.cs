@@ -1,5 +1,4 @@
 using MyTaskLog.Models;
-using System.Collections.Generic;
 
 namespace myTaskLog.Interfaces
 {

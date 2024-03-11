@@ -12,14 +12,14 @@ namespace MyTaskLog.Services;
 
 public class TaskLogcs : ITaskLogService
 {
-    List<TaskLog> TaskLogs ;
+    List<TaskLog> TaskLogs;
     private string fileName = "TaskList.json";
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     public TaskLogcs(IWebHostEnvironment webHost)
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     {
-        this.fileName = Path.Combine(webHost.ContentRootPath, "wwwroot","Data", "TaskList.json");
+        this.fileName = Path.Combine(webHost.ContentRootPath, "wwwroot", "Data", "TaskList.json");
 
         using (var jsonFile = File.OpenText(fileName))
         {
@@ -95,20 +95,11 @@ public class TaskLogcs : ITaskLogService
             return false;
 
         TaskLogs.RemoveAt(index);
-         saveToFile();
+        saveToFile();
         return true;
     }
-    public int Count=>TaskLogs.Count();
+    public int Count => TaskLogs.Count();
 
 
 
-}
-//מחלקה extention
-//שתצור מופע יחיד של יומן משימות
-public static class TaskLogUtils
-{
-    public static void AddTaskLog(this IServiceCollection services)
-    {
-        services.AddSingleton<ITaskLogService, TaskLogcs>();
-    }
 }
