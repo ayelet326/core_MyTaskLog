@@ -20,7 +20,7 @@ public class loginController : ControllerBase
         this.tokenService = tokenService;
         this.userService= userService;
     }
-    
+
     [HttpPost]
     [Route("[action]")]
     public ActionResult<String> Login([FromBody] User User)
@@ -32,7 +32,7 @@ public class loginController : ControllerBase
             {
                 return Unauthorized();
             }
-
+            //המנהל מוגדר לפי שם משתמש של המנהל וסיסמת מנהל
             if (User.Name == "Manager" && User.Password == $"m{dt.Year}#{dt.Day}#456")
             {
                 claims.Add(new Claim("type", "Admin"));
