@@ -3,6 +3,7 @@
 using myTaskLog.Interfaces;
 using MyTaskLog.Services;
 
+namespace TaskLogUtils.Utilites;
 public static class TaskLogUtils
 {
     public static void AddTaskLog(this IServiceCollection services)

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "j7mANKlPrK7xJ7IBee/4j0n9GEjF+2PVMt0oIA4+9Ww=",
+  "Hash": "RQwkz0V+hw2p3FxNiPb4fwOS5x33Adt65+Up02A+ZUU=",
   "Source": "שיעור 2",
   "BasePath": "_content/שיעור 2",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "שיעור 2\\wwwroot",
       "Source": "שיעור 2",
-      "ContentRoot": "C:\\Users\\The user\\Documents\\עבודה בGitHub\\core\\core_MyTaskLog\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
       "BasePath": "_content/שיעור 2",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\The user\\Documents\\עבודה בGitHub\\core\\core_MyTaskLog\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\css\\site.css",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\The user\\Documents\\עבודה בGitHub\\core\\core_MyTaskLog\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
       "BasePath": "_content/שיעור 2",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\The user\\Documents\\עבודה בGitHub\\core\\core_MyTaskLog\\wwwroot\\data\\TaskList.json",
+      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\data\\TaskList.json",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\The user\\Documents\\עבודה בGitHub\\core\\core_MyTaskLog\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
       "BasePath": "_content/שיעור 2",
       "RelativePath": "data/TaskList.json",
       "AssetKind": "All",
@@ -51,10 +51,27 @@
       "OriginalItemSpec": "wwwroot\\data\\TaskList.json"
     },
     {
-      "Identity": "C:\\Users\\The user\\Documents\\עבודה בGitHub\\core\\core_MyTaskLog\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\data\\Users.json",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\The user\\Documents\\עבודה בGitHub\\core\\core_MyTaskLog\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
+      "BasePath": "_content/שיעור 2",
+      "RelativePath": "data/Users.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\Users.json"
+    },
+    {
+      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\index.html",
+      "SourceId": "שיעור 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
       "BasePath": "_content/שיעור 2",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -68,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\The user\\Documents\\עבודה בGitHub\\core\\core_MyTaskLog\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\js\\site.js",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\The user\\Documents\\עבודה בGitHub\\core\\core_MyTaskLog\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
       "BasePath": "_content/שיעור 2",
       "RelativePath": "js/site.js",
       "AssetKind": "All",

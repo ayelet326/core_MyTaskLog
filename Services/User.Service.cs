@@ -1,32 +1,67 @@
 using IUser.Models;
 using User_.Interfaces;
+using System.Collections.Generic;
+using System.Linq;
+using System.IO;
+using System;
+using System.Text.Json;
+using Microsoft.AspNetCore.Hosting;
+using SharedLogicInServices;
 
 namespace UserService.Services;
 
 public class Useres : IUserService
 {
+    private List<User> userList;
+    private string fileName = "Users.json";
+    private SharedLogic<User> shardServices;
+    
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+    public Useres(IWebHostEnvironment webHost)
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+    {
+        this.fileName = Path.Combine(webHost.ContentRootPath, "wwwroot", "Data", "Users.json");
+
+        using (var jsonFile = File.OpenText(fileName))
+        {
+#pragma warning disable CS8601 // Possible null reference assignment.
+            this.userList = JsonSerializer.Deserialize<List<User>>(jsonFile.ReadToEnd(),
+            new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+#pragma warning restore CS8601 // Possible null reference assignment.
+        }
+
+        #pragma warning disable CS8604 // Possible null reference argument.
+        this.shardServices = new SharedLogic<User>(userList, fileName);
+#pragma warning restore CS8604 // Possible null reference argument.
+
+    }
     public int Add(User newUser)
     {
-        throw new NotImplementedException();
+        return shardServices.Add(newUser);
     }
 
     public bool Delete(int id)
     {
-        throw new NotImplementedException();
+        return shardServices.Delete(id);
     }
 
     public List<User> GetAll()
     {
-        throw new NotImplementedException();
+        return shardServices.GetAll();
     }
 
     public User? GetUserById(int id)
     {
-        throw new NotImplementedException();
+        return shardServices.GetById(id);
     }
 
     public bool Update(int id, User newUser)
     {
-        throw new NotImplementedException();
+        bool ifUpdate = shardServices.Update(id, newUser);
+        return ifUpdate;
     }
 }
+

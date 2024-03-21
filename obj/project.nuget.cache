@@ -1,15 +1,31 @@
 {
   "version": 2,
-  "dgSpecHash": "HhwuY8ed/KcDaX1Wui+3jM1A95VWeSUBgRobuvOM4ID17RFQ4i3p5aB23aYOD7aIifaP7XbxCr+1UUYeYAYVKQ==",
+  "dgSpecHash": "dI/NJbj2N0OEXm+Zoxav/Fb5z7Weph4VPziNRN24wzJhOinx6rzWe79ya9EG9bKFgLgFyCYU+BbHEkg77dWZoQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\שיעור 2.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.4\\microsoft.aspnetcore.authentication.jwtbearer.5.0.4.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\The user\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\2.1.1\\microsoft.extensions.caching.abstractions.2.1.1.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.extensions.caching.memory\\2.1.1\\microsoft.extensions.caching.memory.2.1.1.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.1\\microsoft.extensions.dependencyinjection.abstractions.2.1.1.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.extensions.options\\2.1.1\\microsoft.extensions.options.2.1.1.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.extensions.primitives\\2.1.1\\microsoft.extensions.primitives.2.1.1.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.7.1\\microsoft.identitymodel.jsonwebtokens.6.7.1.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.identitymodel.logging\\6.9.0\\microsoft.identitymodel.logging.6.9.0.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.7.1\\microsoft.identitymodel.protocols.6.7.1.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.7.1\\microsoft.identitymodel.protocols.openidconnect.6.7.1.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.9.0\\microsoft.identitymodel.tokens.6.9.0.nupkg.sha512",
     "C:\\Users\\The user\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\The user\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\The user\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\The user\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
-    "C:\\Users\\The user\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    "C:\\Users\\The user\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.7.1\\system.identitymodel.tokens.jwt.6.7.1.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

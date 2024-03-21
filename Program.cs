@@ -1,13 +1,18 @@
-using  MyTaskLog.Services;
 using LogMiddleware.Middlewares;
 using Microsoft.AspNetCore.Builder;
+using UserUtils.Utilites;
+using TaskLogUtils.Utilites;
+using LoginUtils.Utilites;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
 builder.Services.AddTaskLog();
+builder.Services.AddUsres();
+builder.Services.AddLogin();
+builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

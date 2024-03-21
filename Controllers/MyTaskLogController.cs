@@ -2,10 +2,10 @@ using Microsoft.AspNetCore.Mvc;
 using myTaskLog.Interfaces;
 using MyTaskLog.Models;
 
-namespace ksTaskLog.Controllers;
+namespace _TaskLog.Controllers;
 
 [ApiController]
-[Route("todo")]
+[Route("api/todo")]
 public class TaskLogController : ControllerBase
 {
     ITaskLogService TaskService;
@@ -13,6 +13,7 @@ public class TaskLogController : ControllerBase
     {
         this.TaskService = TaskService;
     }
+    
     [HttpGet]
     public ActionResult<List<TaskLog>> Get()
     {
@@ -47,6 +48,7 @@ public class TaskLogController : ControllerBase
         }
         return NoContent();
     }
+
     [HttpDelete("{id}")]
     public ActionResult Delete(int id)
     {

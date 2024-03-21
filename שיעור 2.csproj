@@ -10,6 +10,12 @@
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+    <!-- // -->
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.9.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.4" />
+    <!-- <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0" /> -->
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.9.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
 </Project>
