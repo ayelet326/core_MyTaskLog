@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using User_.Interfaces;
 using IUser.Models;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace _User.Controllers;
@@ -16,6 +17,7 @@ public class UserController : ControllerBase
     }
     
     [HttpGet]
+    [Authorize(Policy = "Admin")]
     public ActionResult<List<User>> Get()
     {
         return UserService.GetAll();
@@ -31,6 +33,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Policy = "Admin")]
     public ActionResult Post(User newUser)
     {
         var newId = UserService.Add(newUser);

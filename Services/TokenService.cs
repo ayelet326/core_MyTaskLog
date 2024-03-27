@@ -8,8 +8,8 @@ namespace TokenService.Services;
 
 public class TokenToLogin : ILoginService
 {
-    private  SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Ayhgfdgel465sdryjdjfjdjf45hFGyYll55Lj3mkn"));
-    private  string issuer = "https://localhost:7150";
+    private static SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Ayhgfdgel465sdr**yjdjfjdjf45hFGyYll55Lj3mkn"));
+    private static string issuer = "https://localhost:7150";
 //מייצר את התוקן עי רשימת הטענות שמקבל 
     public SecurityToken GetToken(List<Claim> claims) =>
             new JwtSecurityToken(
@@ -19,8 +19,9 @@ public class TokenToLogin : ILoginService
                 expires: DateTime.Now.AddDays(30.0),
                 signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
             );
-//מחזיר את הפרמטרים שנוכל איתם לוודא את תקינות התוקן
-    public TokenValidationParameters GetTokenValidationParameters() =>
+//מחזיר את הפרמטרים שנוכל לוודא איתם את תקינות התוקן
+//סטטית כיוון שערכיה קבועים ולא תלויים במופע מסוים
+    public static TokenValidationParameters GetTokenValidationParameters() =>
         new TokenValidationParameters
         {
                 ValidIssuer = issuer,

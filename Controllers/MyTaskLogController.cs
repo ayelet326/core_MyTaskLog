@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using myTaskLog.Interfaces;
 using MyTaskLog.Models;
@@ -15,6 +16,7 @@ public class TaskLogController : ControllerBase
     }
     
     [HttpGet]
+    [Authorize(Policy = "Admin")]
     public ActionResult<List<TaskLog>> Get()
     {
         return TaskService.GetAll();

@@ -15,34 +15,36 @@ public class loginController : ControllerBase
 {
     private ILoginService tokenService;
     private IUserService userService;
-    public loginController(ILoginService tokenService,IUserService userService)
+    public loginController(ILoginService tokenService, IUserService userService)
     {
         this.tokenService = tokenService;
-        this.userService= userService;
+        this.userService = userService;
     }
+    //המנהל מוגדר לפי סיסמת מנהל
+    private bool ifAdmin(User User) => User.Password == $"ImAdmin!326#!";
 
     [HttpPost]
     [Route("[action]")]
     public ActionResult<String> Login([FromBody] User User)
+    {
+        var dt = DateTime.Now;
+        var claims = new List<Claim>();
+        if (ifAdmin(User))
         {
-            var dt = DateTime.Now;
-            var claims = new List<Claim>();
-            var userExist = userService.GetAll().FirstOrDefault(u=> u.Name == User.Name && u.Password == User.Password);
-            if (userExist==null)
-            {
-                return Unauthorized();
-            }
-            //המנהל מוגדר לפי שם משתמש של המנהל וסיסמת מנהל
-            if (User.Name == "Manager" && User.Password == $"m{dt.Year}#{dt.Day}#456")
-            {
-                claims.Add(new Claim("type", "Admin"));
-            }
-
-            claims.Add(new Claim("type", "User"));
-
-            var token = tokenService.GetToken(claims);
-
-            return new OkObjectResult(tokenService.WriteToken(token));
+            claims.Add(new Claim("type", "Admin"));
         }
+        var userExist = userService.GetAll().FirstOrDefault(u => u.Name == User.Name && u.Password == User.Password);
+        if (userExist == null && !ifAdmin(User))
+        {
+            return Unauthorized();
+        }
+        else 
+            if(userExist != null)
+                claims.Add(new Claim("type", "User"));
+
+        var token = tokenService.GetToken(claims);
+
+        return new OkObjectResult(tokenService.WriteToken(token));
+    }
 
 }

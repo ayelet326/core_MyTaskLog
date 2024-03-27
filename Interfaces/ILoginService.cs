@@ -7,7 +7,7 @@ namespace Login.Interfaces
 {
     public interface ILoginService
     {
-    TokenValidationParameters GetTokenValidationParameters();
+    // TokenValidationParameters GetTokenValidationParameters();
     string WriteToken(SecurityToken token) ;
     SecurityToken GetToken(List<Claim> claims);   
     }
