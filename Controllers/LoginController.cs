@@ -6,6 +6,7 @@ using IUser.Models;
 using User_.Interfaces;
 using UserService.Services;
 using Microsoft.AspNetCore.Authorization;
+using enumType.Models;
 
 namespace Login.Controllers;
 
@@ -20,8 +21,7 @@ public class loginController : ControllerBase
         this.tokenService = tokenService;
         this.userService = userService;
     }
-    //המנהל מוגדר לפי סיסמת מנהל
-    private bool ifAdmin(User User) => User.Password == $"ImAdmin!326#!";
+    private bool ifAdmin(User User) => User.TypeUser == TypeUser.ADMIN;
 
     [HttpPost]
     [Route("[action]")]
@@ -29,18 +29,20 @@ public class loginController : ControllerBase
     {
         var dt = DateTime.Now;
         var claims = new List<Claim>();
+        var userExist = userService.GetAll().FirstOrDefault(u => u.Name == User.Name && u.Password == User.Password);
+       
+        if (userExist == null )
+        {
+            return Unauthorized();
+        }
         if (ifAdmin(User))
         {
             claims.Add(new Claim("type", "Admin"));
         }
-        var userExist = userService.GetAll().FirstOrDefault(u => u.Name == User.Name && u.Password == User.Password);
-        if (userExist == null && !ifAdmin(User))
-        {
-            return Unauthorized();
-        }
-        else 
-            if(userExist != null)
-                claims.Add(new Claim("type", "User"));
+
+        claims.Add(new Claim("type", "User"));
+        //Identify the specific user when making requests later
+        claims.Add(new Claim("Id", User.Id.ToString()));
 
         var token = tokenService.GetToken(claims);
 

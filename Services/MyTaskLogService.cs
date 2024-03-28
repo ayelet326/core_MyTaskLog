@@ -38,10 +38,40 @@ public class TaskLogcs : ITaskLogService
         this.sharedService = new SharedLogic<TaskLog>(TaskLogs, fileName);
 #pragma warning restore CS8604 // Possible null reference argument.
     }
+    private bool IfTaskBelongedUser(int taskId, int userId)
+    {
+        TaskLog? taskById = GetById(taskId);
+        //מבטיח שמשתמש יוכל לערוך/למחוק רק את המשימות שלו
+        if (taskById == null || taskById.UserId != userId)
+        {
+            return false;
+        }
+        return true;
+    }
     public List<TaskLog> GetAll() => sharedService.GetAll();
     public TaskLog? GetById(int id) => sharedService.GetById(id);
-    public int Add(TaskLog newTaskLog) => sharedService.Add(newTaskLog);
-    public bool Update(int id, TaskLog newTaskLog) => sharedService.Update(id, newTaskLog);
-    public bool Delete(int id) => sharedService.Delete(id);
+    public int Add(TaskLog newTaskLog, int userId)
+    {
+        //Promises that user add a task only to himself
+        if (newTaskLog.UserId != userId)
+            return -1;
+        return sharedService.Add(newTaskLog);
+    }
+    public bool Update(int taskId, TaskLog newTaskLog, int userId)
+    {
+        if (!IfTaskBelongedUser(taskId, userId))
+        {
+            return false;
+        }
+        return sharedService.Update(taskId, newTaskLog);
+    }
+    public bool Delete(int id, int userId)
+    {
+        if (!IfTaskBelongedUser(id, userId))
+        {
+            return false;
+        }
+        return sharedService.Delete(id);
+    }
 
 }

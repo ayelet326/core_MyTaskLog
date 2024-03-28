@@ -33,7 +33,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPost]
-    [Authorize(Policy = "Admin")]
+   // [Authorize(Policy = "Admin")]
     public ActionResult Post(User newUser)
     {
         var newId = UserService.Add(newUser);

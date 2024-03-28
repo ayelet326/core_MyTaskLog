@@ -32,7 +32,7 @@ public class SharedLogic<T> where T:Shared
         if (this.list.Count() == 0)
 
         {
-            newObg.Id = 1;
+            newObg.Id = 0;
         }
         else
         {
@@ -45,7 +45,7 @@ public class SharedLogic<T> where T:Shared
         return newObg.Id;
     }
 
-     public bool Update(int id, T newObject)
+     public bool Update(int id, T newObject )
     {
         if (id != newObject.Id)
             return false;
