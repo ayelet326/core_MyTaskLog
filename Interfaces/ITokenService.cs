@@ -3,12 +3,14 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Login.Interfaces
+namespace TokenService.Interfaces
 {
-    public interface ILoginService
+    public interface ITokenService
     {
     // TokenValidationParameters GetTokenValidationParameters();
     string WriteToken(SecurityToken token) ;
-    SecurityToken GetToken(List<Claim> claims);   
+    SecurityToken GetToken(List<Claim> claims);
+    int GetUserIdFromToken(IHttpContextAccessor httpContextAccessor); 
+
     }
 }

@@ -9,17 +9,17 @@ using SharedModel.Models;
 
 
 namespace SharedLogicInServices;
- 
-public class SharedLogic<T> where T:Shared
+
+public class SharedLogic<T> where T : Shared
 {
 
     private List<T> list;
     private string fileName;
     //constructor to user service or task service
-    public SharedLogic (List<T> list,string fileName)
+    public SharedLogic(List<T> list, string fileName)
     {
-        this.list=list;
-        this.fileName=fileName;   
+        this.list = list;
+        this.fileName = fileName;
     }
     //write to json  the list after changed
     private void saveToFile()
@@ -45,7 +45,7 @@ public class SharedLogic<T> where T:Shared
         return newObg.Id;
     }
 
-     public bool Update(int id, T newObject )
+    public bool Update(int id, T newObject)
     {
         if (id != newObject.Id)
             return false;
@@ -53,6 +53,13 @@ public class SharedLogic<T> where T:Shared
         var existingObj = GetById(id);
         if (existingObj == null)
             return false;
+
+
+        if (newObject is User)
+        {
+            if (((User)(object)newObject).TypeUser != ((User)(object)existingObj).TypeUser)
+                return false;
+        }
 
         var index = this.list.IndexOf(existingObj);
         if (index == -1)

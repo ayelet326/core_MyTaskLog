@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using myTaskLog.Interfaces;
 using MyTaskLog.Models;
+using TokenService.Interfaces;
 
 namespace _TaskLog.Controllers;
 
@@ -12,32 +13,10 @@ public class TaskLogController : ControllerBase
 {
     ITaskLogService TaskService;
     private int CurrentUserID;
-    private int GetUserIdFromToken(IHttpContextAccessor httpContextAccessor)
-    {
-        var token = httpContextAccessor.HttpContext?.Request.Headers["Authorization"];
-        //substring 'Bearer '
-        token = token?.FirstOrDefault()?.Substring(7);
-        if (!string.IsNullOrEmpty(token))
-        {
-            var handler = new JwtSecurityTokenHandler();
-            //JwtSecurityToken מפענח את הטוקן לאובייקט מסוג 
-            //Claimsכדי שנוכל לגשת לרשימת ה
-            var jsonToken = handler.ReadToken(token) as JwtSecurityToken;
-
-            var idClaim = jsonToken!.Claims.FirstOrDefault(c => c.Type == "Id");
-
-            if (idClaim != null)
-            {
-                return int.Parse(idClaim.Value);
-            }
-        }
-
-        return 1;
-    }
-    public TaskLogController(ITaskLogService TaskService, IHttpContextAccessor httpContextAccessor)
+    public TaskLogController(ITaskLogService TaskService,ITokenService TokenService, IHttpContextAccessor httpContextAccessor)
     {
         this.TaskService = TaskService;
-        this.CurrentUserID = GetUserIdFromToken(httpContextAccessor);
+        this.CurrentUserID = TokenService.GetUserIdFromToken(httpContextAccessor);
     }
 
     [HttpGet]

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using User_.Interfaces;
 using IUser.Models;
 using Microsoft.AspNetCore.Authorization;
+using TokenService.Interfaces;
 
 
 namespace _User.Controllers;
@@ -10,12 +11,16 @@ namespace _User.Controllers;
 [Route("api/user")]
 public class UserController : ControllerBase
 {
-    IUserService UserService;
-    public UserController(IUserService UserService)
+    private IUserService UserService;
+    private int CurrentUserID;
+    public UserController(IUserService UserService, ITokenService TokenService, IHttpContextAccessor httpContextAccessor)
     {
         this.UserService = UserService;
+        this.CurrentUserID = TokenService.GetUserIdFromToken(httpContextAccessor);
+        
     }
-    
+
+    [Route("/GetAll")]
     [HttpGet]
     [Authorize(Policy = "Admin")]
     public ActionResult<List<User>> Get()
@@ -23,17 +28,18 @@ public class UserController : ControllerBase
         return UserService.GetAll();
     }
 
-    [HttpGet("{id}")]
-    public ActionResult<User> Get(int id)
+    [HttpGet]
+    [Authorize(Policy = "User")]
+    public ActionResult<User> GetMyDetails()
     {
-        var User = UserService.GetUserById(id);
+        var User = UserService.GetUserById(CurrentUserID);
         if (User == null)
             return NotFound();
         return User;
     }
 
     [HttpPost]
-   // [Authorize(Policy = "Admin")]
+    [Authorize(Policy = "Admin")]
     public ActionResult Post(User newUser)
     {
         var newId = UserService.Add(newUser);
@@ -42,10 +48,11 @@ public class UserController : ControllerBase
             new { id = newId }, UserService.GetUserById(newId));
     }
 
-    [HttpPut("{id}")]
-    public ActionResult Put(int id, User newUser)
+    [HttpPut]
+    [Authorize(Policy = "User")]
+    public ActionResult Put(User newUser)
     {
-        var result = UserService.Update(id, newUser);
+        var result = UserService.Update(CurrentUserID, newUser);
         if (!result)
         {
             return BadRequest();
@@ -54,6 +61,7 @@ public class UserController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize(Policy = "Admin")]
     public ActionResult Delete(int id)
     {
         var IsDeleted = UserService.Delete(id);

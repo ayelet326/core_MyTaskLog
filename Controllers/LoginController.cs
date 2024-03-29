@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
-using Login.Interfaces;
+using TokenService.Interfaces;
 using TokenService.Services;
 using IUser.Models;
 using User_.Interfaces;
@@ -14,9 +14,9 @@ namespace Login.Controllers;
 [Route("api")]
 public class loginController : ControllerBase
 {
-    private ILoginService tokenService;
+    private ITokenService tokenService;
     private IUserService userService;
-    public loginController(ILoginService tokenService, IUserService userService)
+    public loginController(ITokenService tokenService, IUserService userService)
     {
         this.tokenService = tokenService;
         this.userService = userService;
