@@ -6,7 +6,7 @@ namespace myTaskLog.Interfaces
     {
        
      List<TaskLog> GetAll();
-     TaskLog? GetById(int id) ;
+     TaskLog? GetById(int taskId,int userId) ;
     int Add(TaskLog newTaskLog,int userId);
     bool Update(int id, TaskLog newTaskLog, int userId);  
     bool Delete(int id, int UserId);

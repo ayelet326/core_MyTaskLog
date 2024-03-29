@@ -144,3 +144,13 @@
 /api/todo/8.DELETE  took 172ms.  User: unknown
 /api/todo/9.DELETE  took 7ms.  User: unknown
 /api/todo.POST  took 39ms.  User: unknown
+/api/user.POST  took 25ms.  User: unknown
+/api/Login.POST  took 17ms.  User: unknown
+/api/todo.POST  took 3ms.  User: unknown
+/api/todo/7.GET  took 2ms.  User: unknown
+/api/todo/8.PUT  took 2ms.  User: unknown
+/api/todo/9.DELETE  took 2ms.  User: unknown
+/api/todo/9.GET  took 1ms.  User: unknown
+/api/todo.POST  took 3ms.  User: unknown
+/api/todo/9.GET  took 0ms.  User: unknown
+/api/todo.GET  took 4ms.  User: unknown

@@ -51,8 +51,8 @@ public class TaskLogController : ControllerBase
     [Authorize(Policy = "User")]
     public ActionResult<TaskLog> Get(int id)
     {
-        var TaskLog = TaskService.GetById(id);
-        if (TaskLog == null || TaskLog.UserId != this.CurrentUserID)
+        var TaskLog = TaskService.GetById(id,this.CurrentUserID);
+        if (TaskLog == null )
             return NotFound();
         return TaskLog;
     }
@@ -68,7 +68,7 @@ public class TaskLogController : ControllerBase
             return BadRequest();
         }
         return CreatedAtAction("Post",
-            new { id = newId }, TaskService.GetById(newId));
+            new { id = newId }, TaskService.GetById(newId,this.CurrentUserID));
     }
 
     [HttpPut("{id}")]

@@ -40,8 +40,8 @@ public class TaskLogcs : ITaskLogService
     }
     private bool IfTaskBelongedUser(int taskId, int userId)
     {
-        TaskLog? taskById = GetById(taskId);
-        //מבטיח שמשתמש יוכל לערוך/למחוק רק את המשימות שלו
+        TaskLog? taskById = sharedService.GetById(taskId);
+        //Ensures that a user can only get/edit/delete their own tasks
         if (taskById == null || taskById.UserId != userId)
         {
             return false;
@@ -49,7 +49,14 @@ public class TaskLogcs : ITaskLogService
         return true;
     }
     public List<TaskLog> GetAll() => sharedService.GetAll();
-    public TaskLog? GetById(int id) => sharedService.GetById(id);
+    public TaskLog? GetById(int taskId, int userId)
+    {
+        if (!IfTaskBelongedUser(taskId, userId))
+        {
+            return null;
+        }
+        return sharedService.GetById(taskId);
+    }
     public int Add(TaskLog newTaskLog, int userId)
     {
         //Promises that user add a task only to himself
