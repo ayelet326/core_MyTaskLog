@@ -12,7 +12,7 @@ namespace _TaskLog.Controllers;
 public class TaskLogController : ControllerBase
 {
     ITaskLogService TaskService;
-    private int CurrentUserID;
+    private readonly int CurrentUserID;
     public TaskLogController(ITaskLogService TaskService,ITokenService TokenService, IHttpContextAccessor httpContextAccessor)
     {
         this.TaskService = TaskService;
@@ -23,7 +23,7 @@ public class TaskLogController : ControllerBase
     [Authorize(Policy = "User")]
     public ActionResult<List<TaskLog>> Get()
     {
-        return TaskService.GetAll().FindAll(task => task.UserId == this.CurrentUserID);
+        return TaskService.GetAll(this.CurrentUserID);
     }
 
     [HttpGet("{id}")]
@@ -76,4 +76,5 @@ public class TaskLogController : ControllerBase
         return Content("the task deleted in  successfully!👏👏👏👏👏👏");
 
     }
+    
 }

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <title>My Task Log</title>
     <link rel="stylesheet" href="css/site.css" />
 </head>
 
-<body>
+<body onload="isThereToken()" >
     <h1>My Task Log:</h1>
     <h3>Add</h3>
     <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
@@ -39,10 +38,12 @@
         </tr>
         <tbody id="tasks"></tbody>
     </table>
+    <a href="./html/login.html">ygubikgcvkbhliivmi,ulbikhjn</a>
+    <a href="./html/users.html"> i admin</a>
 
-    <script src="js/site.js" asp-append-version="true"></script>
+    <script src="./js/site.js" asp-append-version="true"></script>
     <script type="text/javascript">
-        getItems();
+       getItems();
     </script>
 </body>
 

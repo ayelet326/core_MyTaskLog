@@ -17,13 +17,9 @@ public class TaskLogcs : ITaskLogService
     private string fileName = "TaskList.json";
     private SharedLogic<TaskLog> sharedService;
 
-
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     public TaskLogcs(IWebHostEnvironment webHost)
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     {
         this.fileName = Path.Combine(webHost.ContentRootPath, "wwwroot", "Data", "TaskList.json");
-
         using (var jsonFile = File.OpenText(fileName))
         {
 #pragma warning disable CS8601 // Possible null reference assignment.
@@ -48,7 +44,7 @@ public class TaskLogcs : ITaskLogService
         }
         return true;
     }
-    public List<TaskLog> GetAll() => sharedService.GetAll();
+    public List<TaskLog> GetAll(int userID) => sharedService.GetAll().FindAll(task => task.UserId == userID);
     public TaskLog? GetById(int taskId, int userId)
     {
         if (!IfTaskBelongedUser(taskId, userId))
@@ -80,5 +76,14 @@ public class TaskLogcs : ITaskLogService
         }
         return sharedService.Delete(id);
     }
+    public void DeleteTasksBelongedUser(int userId)
+    {
+        List<TaskLog> listTasks = GetAll(userId);
+        listTasks.ForEach(task =>
+        {
+            Delete(task.Id, task.UserId);
+        });
 
+
+    }
 }

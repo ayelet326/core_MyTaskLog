@@ -7,6 +7,7 @@ using System;
 using System.Text.Json;
 using Microsoft.AspNetCore.Hosting;
 using SharedLogicInServices;
+using MyTaskLog.Services;
 
 namespace UserService.Services;
 
@@ -15,13 +16,11 @@ public class Useres : IUserService
     private List<User> userList;
     private string fileName = "Users.json";
     private SharedLogic<User> shardServices;
-    
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+    private TaskLogcs TaskLog;
     public Useres(IWebHostEnvironment webHost)
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     {
         this.fileName = Path.Combine(webHost.ContentRootPath, "wwwroot", "Data", "Users.json");
-
+        TaskLog=new TaskLogcs(webHost);
         using (var jsonFile = File.OpenText(fileName))
         {
 #pragma warning disable CS8601 // Possible null reference assignment.
@@ -33,7 +32,7 @@ public class Useres : IUserService
 #pragma warning restore CS8601 // Possible null reference assignment.
         }
 
-        #pragma warning disable CS8604 // Possible null reference argument.
+#pragma warning disable CS8604 // Possible null reference argument.
         this.shardServices = new SharedLogic<User>(userList, fileName);
 #pragma warning restore CS8604 // Possible null reference argument.
 
@@ -43,9 +42,10 @@ public class Useres : IUserService
         return shardServices.Add(newUser);
     }
 
-    public bool Delete(int id)
+    public bool Delete(int userId)
     {
-        return shardServices.Delete(id);
+        TaskLog.DeleteTasksBelongedUser(userId);
+        return shardServices.Delete(userId);
     }
 
     public List<User> GetAll()
@@ -63,5 +63,7 @@ public class Useres : IUserService
         bool ifUpdate = shardServices.Update(id, newUser);
         return ifUpdate;
     }
+
+   
 }
 

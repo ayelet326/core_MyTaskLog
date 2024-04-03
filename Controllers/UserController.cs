@@ -69,7 +69,7 @@ public class UserController : ControllerBase
         {
             return BadRequest();
         }
-        return Content("the task deleted in  successfully!👏👏👏👏👏👏");
+        return Content("the user deleted in  successfully!👏👏👏👏👏👏");
 
     }
 }

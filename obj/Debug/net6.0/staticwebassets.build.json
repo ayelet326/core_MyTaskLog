@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RQwkz0V+hw2p3FxNiPb4fwOS5x33Adt65+Up02A+ZUU=",
+  "Hash": "qDe6Ms6bWTL+HjLcELxNpdbpqxDo9oFOFMVX0ZvrZnY=",
   "Source": "שיעור 2",
   "BasePath": "_content/שיעור 2",
   "Mode": "Default",
@@ -68,6 +68,40 @@
       "OriginalItemSpec": "wwwroot\\data\\Users.json"
     },
     {
+      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\html\\login.html",
+      "SourceId": "שיעור 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
+      "BasePath": "_content/שיעור 2",
+      "RelativePath": "html/login.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\login.html"
+    },
+    {
+      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\html\\users.html",
+      "SourceId": "שיעור 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
+      "BasePath": "_content/שיעור 2",
+      "RelativePath": "html/users.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\users.html"
+    },
+    {
       "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\index.html",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
@@ -85,6 +119,23 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
+      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\js\\login.js",
+      "SourceId": "שיעור 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
+      "BasePath": "_content/שיעור 2",
+      "RelativePath": "js/login.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\login.js"
+    },
+    {
       "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\js\\site.js",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
@@ -100,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\js\\users.js",
+      "SourceId": "שיעור 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
+      "BasePath": "_content/שיעור 2",
+      "RelativePath": "js/users.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\users.js"
     }
   ]
 }
