@@ -35,14 +35,14 @@ public class loginController : ControllerBase
         {
             return Unauthorized();
         }
-        if (ifAdmin(User))
+        if (ifAdmin(userExist))
         {
             claims.Add(new Claim("type", "Admin"));
         }
 
         claims.Add(new Claim("type", "User"));
         //Identify the specific user when making requests later
-        claims.Add(new Claim("Id", User.Id.ToString()));
+        claims.Add(new Claim("Id", userExist.Id.ToString()));
 
         var token = tokenService.GetToken(claims);
 

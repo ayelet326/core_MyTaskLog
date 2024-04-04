@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dI/NJbj2N0OEXm+Zoxav/Fb5z7Weph4VPziNRN24wzJhOinx6rzWe79ya9EG9bKFgLgFyCYU+BbHEkg77dWZoQ==",
+  "dgSpecHash": "uDifRnv3AKA6N32V3tpokyxOLFR9JOqx35xe9s+fnO3bVN/s6ps6gmHP2KuAAuVwiemj+qjhvEIUke6dMXtZ6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\שיעור 2.csproj",
+  "projectFilePath": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\שיעור 2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\The user\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.4\\microsoft.aspnetcore.authentication.jwtbearer.5.0.4.nupkg.sha512",
     "C:\\Users\\The user\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -20,7 +20,7 @@ public class Useres : IUserService
     public Useres(IWebHostEnvironment webHost)
     {
         this.fileName = Path.Combine(webHost.ContentRootPath, "wwwroot", "Data", "Users.json");
-        TaskLog=new TaskLogcs(webHost);
+        TaskLog = new TaskLogcs(webHost);
         using (var jsonFile = File.OpenText(fileName))
         {
 #pragma warning disable CS8601 // Possible null reference assignment.
@@ -37,8 +37,10 @@ public class Useres : IUserService
 #pragma warning restore CS8604 // Possible null reference argument.
 
     }
-    public int Add(User newUser)
+    public int? Add(User newUser)
     {
+        if (GetAll().Any(user => user.Name == newUser.Name && user.Password == newUser.Password))
+            return null;
         return shardServices.Add(newUser);
     }
 
@@ -64,6 +66,6 @@ public class Useres : IUserService
         return ifUpdate;
     }
 
-   
+
 }
 

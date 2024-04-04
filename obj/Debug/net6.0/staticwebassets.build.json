@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qDe6Ms6bWTL+HjLcELxNpdbpqxDo9oFOFMVX0ZvrZnY=",
+  "Hash": "mBUbkz0g55vjtt0tSQveN/hQNvglaNLpdyJ7jXN513w=",
   "Source": "שיעור 2",
   "BasePath": "_content/שיעור 2",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "שיעור 2\\wwwroot",
       "Source": "שיעור 2",
-      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\",
       "BasePath": "_content/שיעור 2",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\css\\site.css",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\",
       "BasePath": "_content/שיעור 2",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\data\\TaskList.json",
+      "Identity": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\data\\TaskList.json",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\",
       "BasePath": "_content/שיעור 2",
       "RelativePath": "data/TaskList.json",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\data\\TaskList.json"
     },
     {
-      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\data\\Users.json",
+      "Identity": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\data\\Users.json",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\",
       "BasePath": "_content/שיעור 2",
       "RelativePath": "data/Users.json",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\data\\Users.json"
     },
     {
-      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\html\\login.html",
+      "Identity": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\html\\login.html",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\",
       "BasePath": "_content/שיעור 2",
       "RelativePath": "html/login.html",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\html\\login.html"
     },
     {
-      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\html\\users.html",
+      "Identity": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\html\\users.html",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\",
       "BasePath": "_content/שיעור 2",
       "RelativePath": "html/users.html",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\html\\users.html"
     },
     {
-      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\index.html",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\",
       "BasePath": "_content/שיעור 2",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\js\\login.js",
+      "Identity": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\js\\login.js",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\",
       "BasePath": "_content/שיעור 2",
       "RelativePath": "js/login.js",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\js\\login.js"
     },
     {
-      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\js\\site.js",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\",
       "BasePath": "_content/שיעור 2",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\js\\users.js",
+      "Identity": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\js\\users.js",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\The user\\Desktop\\פרטיקט CORE\\core_MyTaskLog\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\",
       "BasePath": "_content/שיעור 2",
       "RelativePath": "js/users.js",
       "AssetKind": "All",

@@ -17,7 +17,7 @@ public class UserController : ControllerBase
     {
         this.UserService = UserService;
         this.CurrentUserID = TokenService.GetUserIdFromToken(httpContextAccessor);
-        
+
     }
 
     [Route("/GetAll")]
@@ -43,9 +43,13 @@ public class UserController : ControllerBase
     public ActionResult Post(User newUser)
     {
         var newId = UserService.Add(newUser);
+        if (newId == null)
+            return Conflict("user exist,change your name or password!");
 
-        return CreatedAtAction("Post",
-            new { id = newId }, UserService.GetUserById(newId));
+        int userId = newId.Value;
+        return CreatedAtAction("Post", new { id = newId }, UserService.GetUserById(userId));
+
+
     }
 
     [HttpPut]
