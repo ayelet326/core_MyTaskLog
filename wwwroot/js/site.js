@@ -1,14 +1,20 @@
 const uri = '/api/todo';
 let tasks = [];
 const token = localStorage.getItem("current-token");
-
+let headerReq={
+    method: 'GET',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization':"Bearer "+token
+    },
+};
 function isThereToken() {
-    console.log("hi ");
     if (!token)
         window.location.href = '../html/login.html';
 }
 function getItems() {
-    fetch(uri)
+    fetch(uri,headerReq)
         .then(response => response.json())
         .then(data => _displayItems(data))
         .catch(error => console.error('Unable to get items.', error));
@@ -16,16 +22,20 @@ function getItems() {
 
 function addItem() {
     const addNameTextbox = document.getElementById('add-name');
+    const addDateToDo = document.getElementById('add-dateToDo');
+
     const item = {
         isDone: false,
-        name: addNameTextbox.value.trim()
+        name: addNameTextbox.value.trim(),
+        dateToDo:addDateToDo.value.toString()
     };
 
     fetch(uri, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization':"Bearer "+token
         },
         body: JSON.stringify(item)
     })
@@ -33,13 +43,18 @@ function addItem() {
         .then(() => {
             getItems();
             addNameTextbox.value = '';
+            addDateToDo.value=' ';
         })
         .catch(error => console.error('Unable to add item.', error));
 }
 
 function deleteItem(id) {
     fetch(`${uri}/${id}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers:{
+            'Authorization':"Bearer "+token
+        }
+
     })
         .then(() => getItems())
         .catch(error => console.error('Unable to delete item.', error));
@@ -59,14 +74,16 @@ function updateItem() {
     const item = {
         id: parseInt(itemId, 10),
         isDone: document.getElementById('edit-isDone').checked,
-        name: document.getElementById('edit-name').value.trim()
+        name: document.getElementById('edit-name').value.trim(),
+        dateToDo:document.getElementById('edit-date').value.trim()
     };
 
     fetch(`${uri}/${itemId}`, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization':"Bearer "+token
         },
         body: JSON.stringify(item)
     })
