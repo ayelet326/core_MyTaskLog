@@ -76,14 +76,15 @@ public class TaskLogcs : ITaskLogService
         }
         return sharedService.Delete(id);
     }
-    public void DeleteTasksBelongedUser(int userId)
+    public bool DeleteTasksBelongedUser(int userId)
     {
         List<TaskLog> listTasks = GetAll(userId);
-        listTasks.ForEach(task =>
+        foreach (var task in listTasks)
         {
-            Delete(task.Id, task.UserId);
-        });
+            if (!Delete(task.Id, task.UserId))
+                return false;
+        }
 
-
+        return true;
     }
 }

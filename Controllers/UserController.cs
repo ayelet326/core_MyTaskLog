@@ -3,6 +3,7 @@ using User_.Interfaces;
 using IUser.Models;
 using Microsoft.AspNetCore.Authorization;
 using TokenService.Interfaces;
+using myTaskLog.Interfaces;
 
 
 namespace _User.Controllers;
@@ -11,10 +12,12 @@ namespace _User.Controllers;
 [Route("api/user")]
 public class UserController : ControllerBase
 {
-    private IUserService UserService;
+    private readonly IUserService UserService;
+    private readonly ITaskLogService TaskLogService;
     private int CurrentUserID;
-    public UserController(IUserService UserService, ITokenService TokenService, IHttpContextAccessor httpContextAccessor)
+    public UserController(IUserService UserService,ITaskLogService TaskLogService, ITokenService TokenService, IHttpContextAccessor httpContextAccessor)
     {
+        this.TaskLogService=TaskLogService;
         this.UserService = UserService;
         this.CurrentUserID = TokenService.GetUserIdFromToken(httpContextAccessor);
 
@@ -69,7 +72,8 @@ public class UserController : ControllerBase
     public ActionResult Delete(int id)
     {
         var IsDeleted = UserService.Delete(id);
-        if (!IsDeleted)
+        var IsDeletedTasks=TaskLogService.DeleteTasksBelongedUser(id);
+        if (!IsDeleted||!IsDeletedTasks)
         {
             return BadRequest();
         }

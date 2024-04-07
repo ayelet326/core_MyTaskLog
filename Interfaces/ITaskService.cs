@@ -10,6 +10,7 @@ namespace myTaskLog.Interfaces
     int Add(TaskLog newTaskLog,int userId);
     bool Update(int id, TaskLog newTaskLog, int userId);  
     bool Delete(int id, int UserId);
+    bool DeleteTasksBelongedUser(int userId);
  
     }
 }

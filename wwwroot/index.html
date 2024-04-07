@@ -7,9 +7,9 @@
 </head>
 
 <body onload="isThereToken()" >
-    <h1>My Task Log:</h1>
+    <h1 id="userName" onclick="getMyUser()">My Task Log:</h1>
     <h3>Add</h3>
-    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+    <form action="javascript:void(0);"  onsubmit="addItem()">
         <input type="text" id="add-name" placeholder="Name task">
         <input type="date" id="add-dateToDo" placeholder="date to do">
 
@@ -34,12 +34,12 @@
         <tr>
             <th>IsDone?</th>
             <th>Name</th>
+            <th>Deadline</th>
             <th></th>
             <th></th>
         </tr>
         <tbody id="tasks"></tbody>
     </table>
-    <a href="./html/login.html">ygubikgcvkbhliivmi,ulbikhjn</a>
     <a href="./html/users.html"> i admin</a>
 
     <script src="./js/site.js" asp-append-version="true"></script>

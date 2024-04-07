@@ -16,7 +16,7 @@ function isAdmin() {
         window.location.href = "../index.html";
       }
       else
-        document.getElementById("userName").innerText = " " + user.name;
+        document.getElementById("userName").innerText += " " + user.name;
 
       return user;
     })

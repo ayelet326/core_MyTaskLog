@@ -1,40 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="google-signin-client_id"
+        content="574126390585-fpkb7799uc9201u82qj7l7di9br77ldk.apps.googleusercontent.com"> -->
+    <!-- The button is not present because this library is deprecated -->
+    <!-- There is an automatic redirection by the library to accounts.google.com -->
+    <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <title>login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
+
 <body>
     <h1>Login</h1>
-    <!-- <form id="form_login" class=" mt-5 p-4 col-md-4 mx-5 none">
-        <h3>התחברות</h3>
 
+    <form id="form_login" class=" mt-5 p-4 col-md-4 mx-5 none" method="post" >
         <div class="form-group">
-            <label for="email1">Email:</label>
-            <input type="email" class="form-control" id="email1" name="email1" required>
-        </div>
-        <div class="form-group">
-            <label for="password1">Password:</label>
-            <input type="password" class="form-control" id="password1" name="password1" required>
-        </div>
-        <br>
-
-        <button type="button" class="btn btn-outline-dark" onclick="back()">🔙</button>
-
-        <button type="submit" class="btn btn-outline-dark">Submit</button>
-    </form> -->
-    <form id="form_login" method="post" action="../js/login.js">
-        <div>
             <label for="name">Name:</label>
-            <input type="text" id="name">
+            <input type="text" class="form-control" id="name" required>
         </div>
-        <div>
+        <div class="form-group">
             <label for="password">Password:</label>
-            <input type="password" class="form-control" id="password"  required>
+            <input type="password" class="form-control" id="password" required>
         </div>
-        <button type="submit" >Sign in</button>
+        <button type="submit" class="btn btn-outline-dark">Sign in</button>
     </form>
+
+    <div class="postman-run-button" data-postman-action="collection/fork" data-postman-visibility="public"
+        data-postman-var-1="31369358-a2d94bcb-9edc-4841-a859-194219395d41"
+        data-postman-collection-url="entityId=31369358-a2d94bcb-9edc-4841-a859-194219395d41&entityType=collection&workspaceId=9b63026a-fdac-40dd-96e8-a3b755a3f007">
+    </div>
+
+    <div id="g_id_onload" data-client_id="574126390585-fpkb7799uc9201u82qj7l7di9br77ldk.apps.googleusercontent.com"
+        data-callback="handleCredentialResponse">
+    </div>
+
 </body>
 <script src="../js/login.js"></script>
+
+<script type="text/javascript">
+    (function (p, o, s, t, m, a, n) {
+        !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+        !o.getElementById(s + t) && o.getElementsByTagName("head")[0].appendChild((
+            (n = o.createElement("script")),
+            (n.id = s + t), (n.async = 1), (n.src = m), n
+        ));
+    }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+</script>
+<!-- <script>
+    The button is not present because this library is deprecated 
+    There is an automatic redirection by the library to accounts.google.com
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        var idToken = googleUser.getAuthResponse().id_token;
+        console.log('ID: ' + profile.getId());
+        console.log('Name: ' + profile.getName());
+        handleGoogleSignIn(googleUser);
+    }
+</script> -->
+
 </html>

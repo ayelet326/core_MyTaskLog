@@ -16,11 +16,9 @@ public class Useres : IUserService
     private List<User> userList;
     private string fileName = "Users.json";
     private SharedLogic<User> shardServices;
-    private TaskLogcs TaskLog;
     public Useres(IWebHostEnvironment webHost)
     {
         this.fileName = Path.Combine(webHost.ContentRootPath, "wwwroot", "Data", "Users.json");
-        TaskLog = new TaskLogcs(webHost);
         using (var jsonFile = File.OpenText(fileName))
         {
 #pragma warning disable CS8601 // Possible null reference assignment.
@@ -46,7 +44,6 @@ public class Useres : IUserService
 
     public bool Delete(int userId)
     {
-        TaskLog.DeleteTasksBelongedUser(userId);
         return shardServices.Delete(userId);
     }
 
