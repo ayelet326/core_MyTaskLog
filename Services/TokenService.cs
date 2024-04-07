@@ -21,7 +21,6 @@ public class TokenToLogin : ITokenService
             );
 
 //מחזיר את הפרמטרים שנוכל לוודא איתם את תקינות התוקן
-//סטטית כיוון שערכיה קבועים ולא תלויים במופע מסוים
     public static TokenValidationParameters GetTokenValidationParameters() =>
         new TokenValidationParameters
         {

@@ -23,7 +23,7 @@ public class UserController : ControllerBase
 
     }
 
-    [Route("/GetAll")]
+    [Route("/getAll")]
     [HttpGet]
     [Authorize(Policy = "Admin")]
     public ActionResult<List<User>> Get()

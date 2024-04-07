@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../css/site.css" /> -->
+    <link rel="stylesheet" href="../css/users.css">
+    <title>Users</title>
 </head>
+
 <body onload="isAdmin()">
     <h1 id="userName">hello </h1>
-    <h3>Add</h3>
-    <!-- <form action="javascript:void(0);" method="POST" onsubmit="addUser()">
-        <input type="text" id="add-name" placeholder="New user">
-       
-        <input type="submit" value="Add">
+
+    <h3>Add a new user to the system</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addUser()">
+        <input type="text" id="add-name" placeholder="Enter New User Name" required>
+        <input type="password" id="add-password" placeholder="Enter New Password/Email" required>
+        <select id="userType">
+            <option value="User">User</option>
+            <option value="Admin">Admin</option>
+        </select>
+        <button type="submit">add</button>
     </form>
 
-    <div id="editForm">
-        <h3>Edit</h3>
-        <form action="javascript:void(0);" onsubmit="updateUser()">
-            <input type="hidden" id="edit-id">
-            <input type="checkbox" id="edit-isDone">
-            <input type="text" id="edit-name">     
-            <input type="submit" value="Save">
-            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
-        </form>
-    </div> -->
+
+    <p id="counter"></p>
+
+    <table>
+        <tr>
+            <th> Id </th>
+            <th>Name </th>
+            <th>Password</th>
+            <th>User Type</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tbody id="users"></tbody>
+    </table>
+
+    <a href="../index.html">Manage my tasks</a>
 
 </body>
+
 <script src="../js/users.js"></script>
+<script type="text/javascript">
+    getUsers();
+</script>
+
 </html>

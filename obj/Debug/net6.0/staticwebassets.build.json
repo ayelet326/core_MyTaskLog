@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mBUbkz0g55vjtt0tSQveN/hQNvglaNLpdyJ7jXN513w=",
+  "Hash": "/3fiuq4gbstzkMdpjUEveXDD3ggN/TVF9uwbD83wi4A=",
   "Source": "שיעור 2",
   "BasePath": "_content/שיעור 2",
   "Mode": "Default",
@@ -17,6 +17,23 @@
   ],
   "Assets": [
     {
+      "Identity": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\css\\login.css",
+      "SourceId": "שיעור 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\",
+      "BasePath": "_content/שיעור 2",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
+    },
+    {
       "Identity": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\css\\site.css",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
@@ -32,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\css\\users.css",
+      "SourceId": "שיעור 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\",
+      "BasePath": "_content/שיעור 2",
+      "RelativePath": "css/users.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\users.css"
     },
     {
       "Identity": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\data\\TaskList.json",
@@ -136,12 +170,12 @@
       "OriginalItemSpec": "wwwroot\\js\\login.js"
     },
     {
-      "Identity": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\js\\tasks.js",
       "SourceId": "שיעור 2",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\",
       "BasePath": "_content/שיעור 2",
-      "RelativePath": "js/site.js",
+      "RelativePath": "js/tasks.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,7 +184,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
+      "OriginalItemSpec": "wwwroot\\js\\tasks.js"
     },
     {
       "Identity": "C:\\Users\\The user\\Desktop\\project asp.net\\core_MyTaskLog\\wwwroot\\js\\users.js",

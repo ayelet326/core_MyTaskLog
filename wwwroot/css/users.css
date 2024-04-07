@@ -1,0 +1,98 @@
+body {
+    background-color: #d4d4d4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 30px;
+}
+
+#container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h3 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+
+    margin: 20px auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #ff7b00;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    margin-bottom: 9px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 25%;
+}
+
+button[type="submit"]:hover {
+    background-color:  #f8643b;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    background-color: #f8f8f8;
+}
+
+th {
+    background-color:  #ff7b00;
+    color: #fff;
+    text-align: center;
+}
+
+#counter {
+    text-align: center; /* Centering the counter */
+    font-size: 18px; /* Increased font size */
+}
+
+a {
+    color: #ff7b00;
+    text-decoration: none;
+    display: block;
+    margin: 20px auto;
+    max-width: 200px;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: underline;
+}

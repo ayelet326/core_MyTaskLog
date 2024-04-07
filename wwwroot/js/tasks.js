@@ -1,3 +1,4 @@
+//const jwtDecode = require("jwt-decode");
 const uri = '/api/todo';
 let tasks = [];
 // Retrieve token from local storage
@@ -13,16 +14,41 @@ let headerReq = {
     },
 };
 
-// Check if token exists, if not redirect to login page
+// Check if token exists and not expired, if not redirect to login page
 function isThereToken() {
-    if (!token)
+    const token = localStorage.getItem("current-token");
+    if (!token||isTokenExpired(token)) {
+        alert("You dont have a token or your token has expired, please login")
+        localStorage.setItem("current-token", "");
         window.location.href = '../html/login.html';
+    }
+}
+
+//decode a JSON Web Token (JWT) and extract its payload.
+function decodeJwt(token) {
+    const tokenParts = token.split('.');// splitting the token into header, payload, and signature   
+    const payloadBase64 = tokenParts[1].replace(/-/g, '+').replace(/_/g, '/');// extracting the payload (in base64)
+    const payload = JSON.parse(decodeURIComponent(escape(atob((payloadBase64))))); // decoding the payload from base64 and parsing to json include hebrew chars
+    return payload;
+}
+
+// Compares the current date in milliseconds and the expiration date in the token,
+// and returns the result of the comparison.
+// If the expiration date is less than the current date, the token is marked as expired.
+function isTokenExpired(token) {
+    return (decodeJwt(token).exp < Date.now() / 1000) ;
+}
+
+
+function showUserDetails(user){
+    alert("show user:",user)
+    console.log(user);
 }
 
 // Get current user's data from the server
 function getMyUser() {
     isThereToken();
-    
+
     return fetch('api/user', headerReq)
         .then(response => response.json())
         .then(user => {
@@ -183,4 +209,69 @@ function _displayItems(data) {
 
     tasks = data;
 }
+
+
+// Display form for editing a task
+async function displayEditFormUserDetails() {
+    console.log("in edit form");
+    let user = {
+        id: 0,
+        name: " ",
+        password: " "
+    };
+    await getMyUser().then(user_ => {
+        user.id=user_.id;
+        user.name=user_.name;
+        user.password=user_.password;
+    });
+    document.getElementById('edit-userName').value = user.name;
+    document.getElementById('edit-uesrId').value = user.id;
+    document.getElementById('edit-userPassword').value = user.password;
+    document.getElementById('editFormUserDetails').style.display = 'block';
+
+}
+
+// Update a user
+async function updateUser() {
+     isThereToken();
+    const userId = document.getElementById('edit-uesrId').value;
+    let user = {
+        id: parseInt(userId, 10),
+        password: document.getElementById('edit-userPassword').value.trim(),
+        name: document.getElementById('edit-userName').value.trim(),
+        typeUser:  0
+    };
+    await getMyUser().then(user_ => {
+        user.id=user_.id;
+        user.typeUser=user_.typeUser;
+    });
+
+    fetch('api/user', {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': "Bearer " + token
+        },
+        body: JSON.stringify(user)
+    })
+        .then((res) => {
+            if(res.status===401)
+            throw new Error();
+            else
+            alert("Your details have been successfully updated");
+        })
+        .catch(error => console.error('Unable to update user.', error));
+
+    closeInputUser();
+
+    return false;
+}
+
+// Close input form
+function closeInputUser() {
+    document.getElementById('editFormUserDetails').style.display = 'none';
+}
+
+
 

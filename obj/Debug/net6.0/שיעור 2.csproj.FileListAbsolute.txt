@@ -179,3 +179,5 @@ C:\Users\The user\Desktop\project asp.net\core_MyTaskLog\obj\Debug\net6.0\refint
 C:\Users\The user\Desktop\project asp.net\core_MyTaskLog\obj\Debug\net6.0\שיעור 2.pdb
 C:\Users\The user\Desktop\project asp.net\core_MyTaskLog\obj\Debug\net6.0\שיעור 2.genruntimeconfig.cache
 C:\Users\The user\Desktop\project asp.net\core_MyTaskLog\obj\Debug\net6.0\ref\שיעור 2.dll
+C:\Users\The user\Desktop\project asp.net\core_MyTaskLog\bin\Debug\net6.0\package-lock.json
+C:\Users\The user\Desktop\project asp.net\core_MyTaskLog\bin\Debug\net6.0\package.json

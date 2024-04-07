@@ -1,6 +1,7 @@
 const loginUrl = '/api/Login';
 const form_login = document.getElementById("form_login");
 
+//sign in by login-form
 form_login.onsubmit=(event)=>{
     event.preventDefault();
     const name = document.getElementById("name").value;
@@ -32,7 +33,6 @@ function login(name,password) {
         }
         )
         .then((token) => {
-            console.log(token)
             saveInLocalStorage(token);
             window.location.href = "../index.html";
         })
@@ -51,15 +51,15 @@ function login(name,password) {
 function saveInLocalStorage(token) {
     localStorage.setItem("current-token", token);
 }
+
+//sign in by google account
 //handle the google button
 handleCredentialResponse = (response) => {
     if (response.credential) {
         var idToken = response.credential;
         var decodedToken = decodeJwt(idToken);  
         var userName = decodedToken.name; // User Name
-        console.log(userName);
         var userPassword = decodedToken.email; // User Password=> only for users who registered their email as their password
-        console.log(userPassword);
 
         login(userName,userPassword);
 
@@ -72,12 +72,12 @@ handleCredentialResponse = (response) => {
 
 //decode a JSON Web Token (JWT) and extract its payload.
 function decodeJwt(token) {
-    console.log("in decode:");
     const tokenParts = token.split('.');// splitting the token into header, payload, and signature   
     const payloadBase64 = tokenParts[1].replace(/-/g, '+').replace(/_/g, '/');// extracting the payload (in base64)
     const payload = JSON.parse(decodeURIComponent(escape(atob((payloadBase64))))); // decoding the payload from base64 and parsing to json include hebrew chars
     return payload;
 }
+
 
 
 

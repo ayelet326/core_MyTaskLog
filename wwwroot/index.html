@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>My Task Log</title>
-    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="./css/site.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js" defer></script>
 </head>
 
-<body onload="isThereToken()" >
+<body onload="isThereToken()">
     <h1 id="userName" onclick="getMyUser()">My Task Log:</h1>
     <h3>Add</h3>
-    <form action="javascript:void(0);"  onsubmit="addItem()">
+    <form action="javascript:void(0);" onsubmit="addItem()">
         <input type="text" id="add-name" placeholder="Name task">
         <input type="date" id="add-dateToDo" placeholder="date to do">
 
@@ -17,7 +19,7 @@
     </form>
 
     <div id="editForm">
-        <h3>Edit</h3>
+        <h3>Edit Task:</h3>
         <form action="javascript:void(0);" onsubmit="updateItem()">
             <input type="hidden" id="edit-id">
             <input type="checkbox" id="edit-isDone">
@@ -40,12 +42,27 @@
         </tr>
         <tbody id="tasks"></tbody>
     </table>
-    <a href="./html/users.html"> i admin</a>
 
-    <script src="./js/site.js" asp-append-version="true"></script>
-    <script type="text/javascript">
-       getItems();
-    </script>
+    <button onclick="displayEditFormUserDetails()">Edit my details:</button>
+
+    <div id="editFormUserDetails">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updateUser()">
+            <input type="hidden" id="edit-uesrId">
+            <input type="text" id="edit-userName">
+            <input type="password" id="edit-userPassword">
+            <input type="submit" value="Save User">
+            <a onclick="closeInputUser()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <a href="./html/users.html">User Management</a>
+
 </body>
+
+<script src="./js/tasks.js" asp-append-version="true" ></script>
+<script type="text/javascript">
+    getItems();
+</script>
 
 </html>

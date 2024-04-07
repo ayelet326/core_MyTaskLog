@@ -1,25 +1,96 @@
+/* Define colors */
+:root {
+    --primary-color: #ff7b00; /* Orange */
+    --secondary-color: #f8f8f8; /* Light Gray */
+    --tertiary-color: #fff; /* White */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--tertiary-color); /* White */
+    color: #000; /* Black */
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d4d4d4;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color); /* Orange */
+    margin: 3px;
+    padding: 2px;
+}
+
+h1:hover {
+    cursor: pointer;
+}
+
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='date'],
 input[type='submit'],
 button,
 [aria-label] {
     cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-#editForm {
-    display: none;
+input[type='submit'],
+button {
+    background-color: var(--primary-color); /* Orange */
+    color: #fff; /* White */
+    border: none;
+}
+
+input[type='submit']:hover,
+button:hover {
+    background-color: #ff6600; /* Darker Orange on hover */
 }
 
 table {
-    font-family: Arial, sans-serif;
-    border: 1px solid;
+    border: 1px solid #ccc;
     border-collapse: collapse;
+    width: 80%;
+    margin-bottom: 20px;
 }
 
 th {
-    background-color: #f8f8f8;
-    padding: 5px;
+    background-color: var(--secondary-color); /* Light Gray */
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #ff7b00; /* Darker Orange on hover */
 }
 
 td {
-    border: 1px solid;
-    padding: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: white; /* Darker Orange on hover */
+
+}
+
+#editForm,
+#editFormUserDetails {
+    display: none;
+}
+
+a {
+    color: var(--primary-color); /* Orange */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }

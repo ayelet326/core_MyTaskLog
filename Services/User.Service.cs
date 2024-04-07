@@ -42,21 +42,10 @@ public class Useres : IUserService
         return shardServices.Add(newUser);
     }
 
-    public bool Delete(int userId)
-    {
-        return shardServices.Delete(userId);
-    }
-
-    public List<User> GetAll()
-    {
-        return shardServices.GetAll();
-    }
-
-    public User? GetUserById(int id)
-    {
-        return shardServices.GetById(id);
-    }
-
+    public bool Delete(int userId)=>shardServices.Delete(userId);
+    public List<User> GetAll()=>shardServices.GetAll();
+    public User? GetUserById(int id)=>shardServices.GetById(id);
+   
     public bool Update(int id, User newUser)
     {
         bool ifUpdate = shardServices.Update(id, newUser);

@@ -19,7 +19,7 @@ public class LogMiddleware
         startWork.Start();
         await next(http_context);
         writeLogToFile($"{http_context.Request.Path}.{http_context.Request.Method}  took {startWork.ElapsedMilliseconds}ms."
-            + $"  User: {http_context.User?.FindFirst("userId")?.Value ?? "unknown"}");     
+            + $"  User: {http_context.User?.FindFirst("Id")?.Value ?? "unknown"}");     
               
     }   
 
