@@ -35,4 +35,16 @@ The system manages two main aspects of access permissions: regular user permissi
 ## User Interface:
 
 ### Login Page:
-- ![Login Page ](./wwwroot/Screenshots/login%20page.png)
+- ![Login Page](./wwwroot/Screenshots/login%20page.png)
+
+### Task Management Page:
+- ![Task Management Page](./wwwroot/Screenshots/taskMangmentPage.png)
+
+#### Editing a Task:
+- ![Editing a Task](./wwwroot/Screenshots/editTask.png)
+
+#### Edit User Details:
+- ![Edit User Details](./wwwroot/Screenshots/editUserDetails.png)
+
+### User Management Page:
+- ![User Management Page](./wwwroot/Screenshots/userMangmentPage.png)
