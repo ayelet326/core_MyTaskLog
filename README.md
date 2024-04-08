@@ -8,11 +8,11 @@
 
 ### Description:
 The system is built on a client-server architecture, with a division between the server-side and the client-side. The server is based on C# language and ASP.NET framework, while the client is based on static resources of JS, HTML, and CSS
-#### Client-side Responsibilities:
+### Client-side Responsibilities:
 
 The client-side application, developed using HTML, CSS, and JavaScript, focuses on presenting the user interface (UI) and facilitating user interactions. Its primary purpose is to provide a visually appealing and intuitive interface for users to interact with the system. It communicates with the server-side APIs to perform various operations, such as creating, reading, updating, and deleting tasks and users. Additionally, the client-side application handles HTTP requests to the server and processes responses, updating the UI accordingly. Essentially, it is responsible for the visual presentation and user experience of the system
 
-#### Server-side Responsibilities:
+### Server-side Responsibilities:
 The server-side API, implemented using ASP.NET MVC Web API , serves as the backend of the system. Its main role is to handle requests from the client-side application and perform necessary operations on the data. This includes managing tasks and users stored in JSON files or a database. The server-side API exposes endpoints that the client-side application interacts with, sending HTTP requests (e.g., GET, POST, PUT, DELETE) to perform CRUD operations. It processes these requests, interacts with the data storage (e.g., JSON files), and sends back responses containing relevant data or status codes. Overall, the server-side API is responsible for the data management and processing logic of the system
 
 ## Access Permissions:
@@ -31,4 +31,5 @@ The system manages two main aspects of access permissions: regular user permissi
 
 - In case the user is not logged in or their token has expired, they will be redirected to the login page to log in again.
 - Users can log in using their username and password, via their Google account, or by using Postman.
- 
+
+### User Interface:
