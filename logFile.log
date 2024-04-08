@@ -1694,3 +1694,21 @@
 /index.html.GET  took 0ms.  User: unknown
 /api/todo.GET  took 0ms.  User: 3
 
+/index.html.GET  took 33ms.  User: unknown
+/css/site.css.GET  took 5ms.  User: unknown
+/js/tasks.js.GET  took 5ms.  User: unknown
+/favicon.ico.GET  took 44ms.  User: unknown
+/api/todo.GET  took 275ms.  User: 3
+/api/todo.GET  took 44ms.  User: unknown
+/html/login.html.GET  took 29ms.  User: unknown
+/css/login.css.GET  took 4ms.  User: unknown
+/html/login.html.GET  took 1ms.  User: unknown
+/api/Login.POST  took 373ms.  User: unknown
+/index.html.GET  took 1ms.  User: unknown
+/api/todo.GET  took 145ms.  User: 3
+/api/user.GET  took 12ms.  User: 3
+/html/users.html.GET  took 3ms.  User: unknown
+/css/users.css.GET  took 2ms.  User: unknown
+/js/users.js.GET  took 4ms.  User: unknown
+/api/user.GET  took 1ms.  User: 3
+/getAll.GET  took 4ms.  User: 3

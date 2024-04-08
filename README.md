@@ -32,4 +32,7 @@ The system manages two main aspects of access permissions: regular user permissi
 - In case the user is not logged in or their token has expired, they will be redirected to the login page to log in again.
 - Users can log in using their username and password, via their Google account, or by using Postman.
 
-### User Interface:
+## User Interface:
+
+### Login Page:
+- ![Login Page ](./wwwroot/Screenshots/login%20page.png)
