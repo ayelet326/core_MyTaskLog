@@ -51,5 +51,5 @@ COPY --from=build /app/out .
 EXPOSE 80
 
 # Command to run the application
-ENTRYPOINT ["dotnet", "שיעור_2.dll"]
+ENTRYPOINT ["dotnet", "שיעור 2.dll"]
 
