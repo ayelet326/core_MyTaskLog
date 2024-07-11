@@ -5,7 +5,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /app
 
 # Copy the project file and restore dependencies
-COPY שיעור\ 2.csproj .
+COPY *.csproj ./
 RUN dotnet restore
 
 # Copy the remaining source code
@@ -24,5 +24,5 @@ COPY --from=build /app/out .
 EXPOSE 80
 
 # Command to run the application
-ENTRYPOINT ["dotnet", "שיעור 2.dll"]
+ENTRYPOINT ["dotnet", "YourProject.dll"]
 
