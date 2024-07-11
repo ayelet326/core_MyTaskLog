@@ -19,7 +19,7 @@ public class TaskLogcs : ITaskLogService
 
     public TaskLogcs(IWebHostEnvironment webHost)
     {
-        this.fileName = Path.Combine(webHost.ContentRootPath, "wwwroot", "Data", "TaskList.json");
+        this.fileName = Path.Combine(webHost.ContentRootPath, "wwwroot", "data", "TaskList.json");
         using (var jsonFile = File.OpenText(fileName))
         {
 #pragma warning disable CS8601 // Possible null reference assignment.
