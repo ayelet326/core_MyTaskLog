@@ -18,7 +18,7 @@ public class Useres : IUserService
     private SharedLogic<User> shardServices;
     public Useres(IWebHostEnvironment webHost)
     {
-        this.fileName = Path.Combine(webHost.ContentRootPath, "wwwroot", "Data", "Users.json");
+        this.fileName = Path.Combine(webHost.ContentRootPath, "wwwroot", "data", "Users.json");
         using (var jsonFile = File.OpenText(fileName))
         {
 #pragma warning disable CS8601 // Possible null reference assignment.
